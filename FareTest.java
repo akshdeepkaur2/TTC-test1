@@ -40,5 +40,22 @@ public class FareTest {
 		String[] z = new String[] {"calculate"};
 		Double fare = z.calculateTotal(from1,to1);
 		assertEquals(3.00, fare,0.0);
-
+		}
+//r4
+	@Test
+	public void test4() {
+		String[]from1  = new String[] {"Finch Station","Leslie"};
+		String[] to1 = new String[]{"Sheppard", "Don Mills"};
+		String[] z = new String[] {"calculate"};
+		Double fare = z.calculateTotal(from1,to1);
+		assertEquals(5.50, fare,0.0);
+		}
+	@Test
+	public void test5() {
+		String[]from1  = new String[] {"Finch Station","Sheppard","Finch station"};
+		String[] to1 = new String[]{"Sheppard","FInch Station","Sheppard"};
+		String[] z = new String[] {"calculate"};
+		Double fare = z.calculateTotal(from1,to1);
+		assertEquals(6.00, fare,0.0);
+		}
 }
